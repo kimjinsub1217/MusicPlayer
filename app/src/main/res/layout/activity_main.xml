@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/coverBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.4"
+        android:contentDescription="@string/albumBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_blur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/titleArtistInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewLine"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.93">
+
+        <ImageButton
+            android:id="@+id/arrowDownButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/arrowDownButton"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:layout_constraintEnd_toStartOf="@id/soundQuality"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1"
+            app:tint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/soundQuality"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/round_square"
+            android:drawableStart="@drawable/ic_baseline_music_note_24"
+            android:drawableTint="@color/black"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:text="@string/soundQuality"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/instagram"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@id/arrowDownButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/instagram"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/instagram"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@id/soundQuality"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titleArtistInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/albumImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/artistName"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/artistName"
+            android:textColor="@color/gray_8A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <ImageButton
+            android:id="@+id/titleRightButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/titleRightButton"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/albumImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/albumCoverImage"
+        android:src="@drawable/bigbang_background"
+        app:layout_constraintBottom_toTopOf="@id/lyrics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleArtistInfo"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/lyrics"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="#0379C8"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/albumImage"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.57"
+        tools:text="이듬해 질 녘 꽃 피는 봄 한 여름 밤의 꿈 가을 타 겨울 내릴 눈 1년 네 번 또 다시 봄" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:minWidth="2dp"
+        android:minHeight="2dp"
+        android:progressTint="#0379C8"
+        android:thumb="@drawable/player_seek_thumb"
+        android:thumbTint="#0379C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lyrics"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.95"
+        tools:progress="50" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playTimeBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        app:layout_constraintBottom_toTopOf="@id/musicTime"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.9">
+
+
+        <TextView
+            android:id="@+id/PlayTime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintWidth_default="percent"
+            tools:text="0:00" />
+
+        <TextView
+            android:id="@+id/totalTime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintWidth_default="percent"
+            tools:text="3:33"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/musicTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_default="percent" />
+
+
+    <ImageView
+        android:id="@+id/repeatPlayButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/repeatPlay"
+        android:src="@drawable/ic_baseline_cached_24"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toStartOf="@id/previousButton"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/previousButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/previousButton"
+        android:src="@drawable/ic_baseline_skip_previous_24"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toStartOf="@id/playButton"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toEndOf="@id/repeatPlayButton"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_percent="0.2"
+        app:tint="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_baseline_play_arrow_24"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/playButton"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toStartOf="@id/nextButton"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toEndOf="@id/previousButton"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_percent="0.2"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/nextButton"
+        android:src="@drawable/ic_baseline_skip_next_24"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toStartOf="@id/shuffleButton"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toEndOf="@id/playButton"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_percent="0.2"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/shuffleButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/shuffleButton"
+        android:src="@drawable/ic_baseline_shuffle_24"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toEndOf="@id/nextButton"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.2" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playButton"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.95">
+
+        <ImageButton
+            android:id="@+id/speakerButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/speakerButton"
+            android:src="@drawable/ic_baseline_speaker_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/relatedButton"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/relatedButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#fff"
+            android:backgroundTint="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_up_24"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="@string/relateButton"
+            android:textColor="@color/gray_8A"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/playListButton"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@id/speakerButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <ImageButton
+            android:id="@+id/playListButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/playListButton"
+            android:src="@drawable/ic_baseline_playlist_play_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@id/relatedButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

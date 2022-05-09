@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="albumBackground">앨범커버이미지를 배경화면으로 설정</string>
+    <string name="albumCoverImage">앨범커비이미지</string>
+    <string name="soundQuality">MP3 320k</string>
+    <string name="title">봄여름가을겨울</string>
+    <string name="artistName">BigBang (빅뱅)</string>
+    <string name="titleRightButton">타이틀옆 점점버튼</string>
+    <string name="repeatPlay">반복재생</string>
+    <string name="previousButton">이전버튼</string>
+    <string name="arrowDownButton">아랫화살표버튼</string>
+    <string name="playButton">재생버튼</string>
+    <string name="nextButton">다음버튼</string>
+    <string name="shuffleButton">셔플버튼</string>
+    <string name="speakerButton">스피커버튼</string>
+    <string name="relateButton">연관 추천</string>
+    <string name="playListButton">플레이리스트 버튼</string>
+    <string name="playTime"> %02d : %02d </string>
+    <string name="totalTime"> %02d : %02d </string>
+</resources>
